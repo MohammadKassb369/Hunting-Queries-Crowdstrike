@@ -1,0 +1,11 @@
+The followimg query used to search for a command line used to swict for the safe mode (network safe mode)
+
+"
+event_simpleName= ProcessRollup2 CommandLine="*/set safeboot*"
+
+"
+
+Luna-Ransomware-query:
+
+((ImageFileName="*\\luna.exe" AND ((CommandLine="*-file*" OR CommandLine="*-dir*" OR CommandLine="*lune.exe*") OR (CommandHistory="*-file*" OR CommandHistory="*-dir*" OR CommandHistory="*lune.exe*"))) OR (ImageFileName="*\\cmd.exe" AND ((CommandLine="*bcdedit*" OR CommandLine="*/set safeboot*" OR CommandLine="*networkChanges*") OR (CommandHistory="*bcdedit*" OR CommandHistory="*/set safeboot*" OR CommandHistory="*networkChanges*")))
+
